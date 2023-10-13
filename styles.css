@@ -1,0 +1,189 @@
+
+.background_weather_finder {
+    background-image: url("https://img.freepik.com/free-photo/mesmerizing-view-fresh-green-fields-cloudy-sky_181624-49447.jpg?size=626&ext=jpg&ga=GA1.2.576068589.1681313773&semt=ais");
+    background-size: cover;
+    height: 100vh;
+    padding: 5rem;
+    padding-bottom: 30px;
+}
+
+.card_weather {
+    margin-top: -50px;
+    padding-bottom: 10rem;
+    /* From https://css.glass */
+    background: rgba(0, 0, 0, 0.73);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Foldit', cursive;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Sofia Sans Condensed', sans-serif;
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px black;
+}
+
+input {
+    background: #1e1e1e;
+    outline: none;
+    color: #fff;
+    padding: 0.5rem 3rem;
+    border-radius: 1px;
+    border: 0.0001rem solid #353434;
+    letter-spacing: 1px;
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+input:focus {
+    background: white;
+    color: black;
+}
+
+.weather__search {
+    position: relative;
+    color: black;
+}
+
+.google_search_icon {
+    position: absolute;
+    left: 10px;
+    top: 20px;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.search_icon {
+    color: white;
+}
+
+.button_search {
+    padding: 7px 20px;
+    background: #1e1e1e;
+    border: 0.0001rem solid #353434;
+    color: white;
+    font-size: 2rem;
+    margin-left: 10px;
+    transition: 0.4s;
+}
+
+.button_search:hover {
+    color: white;
+    background: black;
+    border-color: #727171;
+    border-radius: 2px;
+    transform: scale(1.12);
+}
+
+.place_container {
+    margin-left: -10px;
+}
+
+.place_search_heading,
+.temp_place_result {
+    color: white;
+    margin-top: 10px;
+    letter-spacing: 2px;
+}
+
+.temp_place_result {
+    font-size: 3rem;
+}
+
+.temp_icon {
+    color: white;
+}
+
+.temperature_item {
+    background: #1e1e1e;
+    border-radius: 4px;
+    padding: 20px 20px;
+    transition: 0.4s;
+    border: 0.001rem solid #646464;
+    cursor: pointer;
+}
+
+.temperature_item:hover {
+    transform: scale(1.1);
+    background: black;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.wind_icon_weather {
+    font-size: 3.5rem;
+    color: white;
+
+}
+
+.temp_item_text,
+.temp_text_second {
+    color: white;
+    margin-left: 20px;
+    line-height: 30px;
+    letter-spacing: 2px;
+}
+
+.temp_text_second {
+    font-size: 35px;
+}
+
+.description_weather {
+    letter-spacing: 2px;
+    color: white;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+/*loader********************************/
+.loader {
+    position: relative;
+    width: 110px;
+    height: 30px;
+    background: #fff;
+    border-radius: 100px;
+}
+
+.loader::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 40px 0 0 20px #fff;
+}
+
+.snow {
+    position: relative;
+    display: flex;
+    z-index: 1;
+}
+
+.snow span {
+    position: relative;
+    width: 3px;
+    height: 3px;
+    background: #fff;
+    margin: 0 2px;
+    border-radius: 50%;
+    animation: snowing 5s linear infinite;
+    animation-duration: calc(15s / var(--i));
+    transform-origin: bottom;
+}
+
+@keyframes snowing {
+    0% {
+        transform: translateY(0px);
+    }
+
+    70% {
+        transform: translateY(100px) scale(1);
+    }
+
+    100% {
+        transform: translateY(100px) scale(0);
+    }
+}
